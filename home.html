@@ -224,7 +224,7 @@
           <div>
           <button style="border: none; background: none; cursor: grab;" onclick="copyText()" aria-label="A button that when clicked on, copies the text inside of the text box next to this button."><img src="assets/images/site/mintbunnies-link.gif" alt="An image of the 'mintbunnies neighbourhood' link button."/></button>
           <textarea id="link-text" label="A text box that contains code to link back to the 'mintbunnies neighbourhood' site through the image of the link button." disabled>
-<a href="https://minntibunni.nekoweb.org"><img src="https://minntibunni.nekoweb.org/assets/images/site/mintbunnies-link.gif" alt="mintbunnies neighbourhood" title="✧˖° mintbunnies neighbourhood ✧˖°"></a>
+<a href="http://minntibunni.art"><img src="http://minntibunni.art/assets/images/site/mintbunnies-link.gif" alt="mintbunnies neighbourhood" title="✧˖° mintbunnies neighbourhood ✧˖°"></a>
           </textarea>
           <script>
             function copyText(){
@@ -236,28 +236,6 @@
             }
             </script>
           </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="inner-container">
-          <h3 style="color: #459c95; text-align: center"> stats </h3>
-          <p id="visitors" style="color: #459c95; text-align: center"></p>
-          <p id="followers" style="color: #459c95; text-align: center"></p>
-          <br />
-          <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="30" title="A button to follow the site on Nekoweb."></iframe>
-
-          <script>
-              
-              (async () => {
-                  const request = await fetch(`https://nekoweb.org/api/site/info/minntibunni.nekoweb.org`,);
-                  const json = await request.json();
-             
-                  document.getElementById("visitors").innerHTML = `visitors: ${json.views}`;
-                  document.getElementById("followers").innerHTML = `followers: ${json.followers}`;
-              })();
-              
-          </script>
         </div>
       </div>
     </div>
