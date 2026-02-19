@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css?c=3" />
+    <title>✧˖° mintbunnies ✧˖°</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <script src="../assets/scripts/cursor-sparkle.js?c=1"></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+  </head>
+  <body>
+    <div class="lace"></div>
+      <div class="container title-container">
+        <div class="inner-container">
+          <h1 class="title">
+            <span>❤</span> <span>m</span><span>i</span><span>n</span
+            ><span>t</span><span>b</span><span>u</span><span>n</span
+            ><span>n</span><span>i</span><span>e</span><span>s</span>
+            <span>n</span><span>e</span><span>i</span><span>g</span
+            ><span>h</span><span>b</span><span>o</span><span>u</span
+            ><span>r</span><span>h</span><span>o</span><span>o</span
+            ><span>d</span> <span>❤</span>
+          </h1>
+        </div>
+      </div>
+    <div class="row" style="justify-content: center;">
+      <div class="left">
+        <div class="container map">
+          <div class="column inner-container">
+            <h2>rooms</h2>
+
+            <nav>
+              <a class="column" href="entrance.html" aria-labelledby="entrance-nav-link"><figure><img src="../assets/images/site/welcome-mat.png" alt="An image of a welcome mat drawn in pixel style."/><figcaption id="entrance-nav-link">entrance</figcaption> </figure></a>
+              <a class="column" href="blog.html" aria-labelledby="blog-nav-link"><figure><img src="../assets/images/site/blog.png" alt="An image of a journal and pencil drawn in pixel style."><figcaption id="blog-nav-link">blog</figcaption></figure></a>
+              <a class="column" href="wardrobe.html" aria-labelledby="wardrobe-nav-link"><figure><img src="../assets/images/site/outfits.png" alt="An image of a beret with a green bow attatched on it drawn in pixel style."><figcaption id="wardrobe-nav-link">wardrobe</figcaption></figure></a>
+              <a class="column" href="../home.html" aria-labelledby="home-nav-link"><figure><img src="../assets/images/site/home.png" alt="An image of a home drawn in pixel style."/><figcaption id="home-nav-link">back to neighbourhood</figcaption> </figure> </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="centre">
+      <div class="container" >
+        <div class="column inner-container" >
+          <div class="inner-inner-container">
+            <p>
+                welcome to my home! i wanted this site to mostly be focussed on my art so i'm kind of "hiding" anything personal and unrelated here! enjoy your stay! (´｡• ᵕ •｡`)
+            </p>
+          </div>
+          <div class="row">
+            <img src="../assets/images/site/chibi-me.png" alt="A chibi styled drawing of the mayor. She is winking and doing a peace sign." style="max-width: 250px; align-self: center; transform: scale(1.25);"/>
+            <div class="inner-inner-container">
+                <h3 style="display: inline-block;">current status</h3> <a href="https://lovesick.cafe/esoterica/angelnumbers"><img src="../assets/images/site/angel-number-777.png" alt="An image showing the number '777' surrounded by angel wings drawn in pixel style."/></a>
+                <p>21/12/25: just recently got fields of mistria (thanks mum) and i'm really enjoying it! as much as i want to love stardew valley, i couldn't really get into it but the art and music in this game is much more to my style!! </p>
+                <br>
+                <hr style="
+                border-width: 1px;
+                border-style: dashed;
+                border-color: #835252;">
+                <br>
+                <p>
+                    currently feeling: <span style="font-weight: bold;">relieved</span>
+                    <br>
+                    currently playing: <span style="font-weight: bold;">fields of mistria</span>
+                    <br>
+                    currently watching: <span style="font-weight: bold;">nothing</span>
+                    <br>
+                    currently listening to: <span style="font-weight: bold;">memeshii by aoris</span>
+                    <br>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column right">
+      <div class="container">
+        <div class="inner-container">
+            <div class="inner-inner-container"> 
+                <h3 style="display: inline; ">jukebox</h3>
+                <img src="../assets/images/site/guitar.gif" alt="An image of a guitar with animated music notes surrounding it drawn in pixel style."/>
+
+                <br>
+                <br>
+                <div id="" class="player-container" style="color: #459c95;">
+                  <br>
+                  
+                    <audio id="mu" src="" style="display: hidden;" preload=”metadata”></audio>
+            
+                    <marquee id="info" class="info" scrollamount="3" style="text-align: center; width: 100%;"> song title here </marquee>
+            
+                    <div class="trackdurationcontrols" style="text-align: center;">
+                      <div id="current-time" class="time" style="display: inline;">0:00</div>
+                      <div style="display: inline;">/</div>
+                      <div id="duration" class="time" style="display: inline;">0:00</div>
+                    </div>
+            
+                    <div class="trackcontrols">
+                      <button id="prev-btn" onclick="prevTrack()">◁◁</button>
+                      <button id="playpause-btn" onclick="playPauseTrack()">▷</button>
+                      <button id="next-btn" onclick="nextTrack()">▷▷</button>
+                    </div>
+                            
+                    <script type="text/javascript">
+                      let track_index = 0;
+                      let track_list = [
+                        {
+                          path: "../assets/sound/memeshii.mp3",
+                          title: "memeshii",
+                          artist: "aoris"
+                        },
+                        {
+                          path: "../assets/sound/sunday.mp3",
+                          title: "sunday",
+                          artist: "snail's house"
+                        },
+                        {
+                          path: "../assets/sound/poppin-up.mp3",
+                          title: "poppin' up!",
+                          artist: "kasumi nakasu (cv. mayu sagara)"
+                        },
+                        {
+                          path: "../assets/sound/furo-hairu-profile.mp3",
+                          title: "furo hairu profile",
+                          artist: "mochiutsune"
+                        }
+                      ];
+                    </script>
+                    <script src="../assets/scripts/entrance-music-player.js"></script>
+                  </div>
+            </div> 
+        </div>
+      </div>
+      <div class="container">
+        <div class="inner-container">
+            <div class="inner-inner-container">
+                <h3 style="text-align: center;">virtual pets</h3>
+                <br>
+                <div style="display: grid; grid-template-columns: auto auto; gap: 20px;">
+                    <a href="https://tamanotchi.world/23337c"><img src="https://tamanotchi.world/i2/23337" alt="a tamaNOTchi named mocha that can be clicked on to feed" style="border-radius: 0px;"></a>
+                    <a href="https://tamanotchi.world/25756c"><img src="https://tamanotchi.world/i2/25756" alt="a tamaNOTchi named matcha that can be clicked on to feed" style="border-radius: 0px;"></a>
+                  </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <div id="pagedoll"></div>
+  </body>
+</html>

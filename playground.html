@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css?c=3" />
+    <title>✧˖° mintbunnies ✧˖°</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+  </head>
+  <body>
+    <div class="lace"></div>
+    <div class="container title-container">
+      <div class="inner-container">
+        <h1 class="title">
+          <span>❤</span> <span>m</span><span>i</span><span>n</span><span>t</span
+          ><span>b</span><span>u</span><span>n</span><span>n</span><span>i</span
+          ><span>e</span><span>s</span> <span>n</span><span>e</span
+          ><span>i</span><span>g</span><span>h</span><span>b</span><span>o</span
+          ><span>u</span><span>r</span><span>h</span><span>o</span><span>o</span
+          ><span>d</span> <span>❤</span>
+        </h1>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center">
+      <div class="left">
+        <div class="container map">
+          <div class="column inner-container">
+            <h2>map</h2>
+
+            <nav>
+              <a class="column" href="home.html" aria-labelledby="home-nav-link"><figure><img src="assets/images/site/home.png" alt="An image of a home drawn in a pixel style."/><figcaption id="home-nav-link">home</figcaption> </figure> </a>
+              <a class="column" href="about.html" aria-labelledby="about-nav-link"><figure><img src="assets/images/site/town-hall.png" alt="An image of a town hall drawn in a pixel style."/><figcaption id="about-nav-link">mayor</figcaption> </figure></a>
+              <a class="column" href="art.html" aria-labelledby="art-nav-link"><figure><img src="assets/images/site/museum.png" alt="An image of a museum drawn in a pixel style."/><figcaption id="art-nav-link">art museum</figcaption> </figure></a>
+              <a class="column" href="playground.html" aria-labelledby="playground-nav-link"><figure><img src="assets/images/site/playground.png" alt="An image of a set of swings and a slide drawn in a pixel style."/><figcaption id="playground-nav-link">playground</figcaption></figure></a>
+              <a class="column" href="adopts.html" aria-labelledby="adopts-nav-link"> <figure> <img src="assets/images/site/cosycocoa.png" alt="An image of a building shaped like a bunny head with whipped cream on top drawn in a pixel style."><figcaption id="adopts-nav-link">cosy cocoa</figcaption></figure></a>
+              <a class="column" href="commissions.html" aria-labelledby="commissions-nav-link"><figure><img src="assets/images/site/bakery.png" alt="An image of a bakery drawn in a pixel style."/><figcaption id="commissions-nav-link">bunni bakery</figcaption> </figure></a>
+              <a class="column" href="credits.html" aria-labelledby="credits-nav-link"><figure><img src="assets/images/site/credits.png" alt="An image of a envelope with a bunny head shaped sticker stuck on it drawn in a pixel style."/><figcaption id="credits-nav-link">credits</figcaption> </figure> </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="column centre">
+        <div class="container">
+          <div class="column inner-container">
+            <div class="inner-inner-container">
+              <h2>playground</h2>
+              <p>
+                you've arrived at the playground! here's some random things for
+                you to play around with!
+              </p>
+            </div>
+            <div class="row">
+              <div class="inner-inner-container" style="max-height: 935px;">
+                <h2>drawbox</h2>
+                <div class="drawbox" style="text-align: center;">
+                  <canvas id="drawboxcanvas" width="500" height="500" aria-label="A canvas that can be drawn on. Drawings can be submitted to be seen by everyone."></canvas>
+                  <br />
+                  <div
+                    onclick="change_color(this)"
+                    style="background: red"
+                    class="stroke-color"
+                  ></div>
+                  <div
+                    onclick="change_color(this)"
+                    style="background: blue"
+                    class="stroke-color"
+                  ></div>
+
+                  <button onclick="Restore()">undo</button>
+                  <button onclick="Clear()">clear</button>
+
+                  <input type="color" oninput="stroke_color = this.value" aria-label="A button that can be used to change the colour of the strokes drawn on the canvas."/>
+                  <div class="column" style="display: inline-flex; row-gap: 0px;">
+                    <input
+                      type="range"
+                      min="1"
+                      max="100"
+                      oninput="stroke_width = this.value"
+                      name="slider"
+                    >
+                    <label for="slider" style="color: #459c95">stroke width</label>
+                  </div>
+                  <button id="submit">finish</button>
+                  <p id="status"></p>
+
+                  <h3 style="text-align: start;">submitted drawings</h3>
+                  <div id="gallery">loading images...</div>
+
+                  <script src="assets/scripts/drawbox.js?c=2"></script>
+                </div>
+              </div>
+
+              <div class="inner-inner-container">
+                <form method="post" action="https://poll.pollcode.com/81868927">
+                  <div class="poll column">
+                    <p style="margin-bottom: 10px;">what's your favourite colour?</p>
+                    
+                    <div>
+                      <input type="radio" name="answer" value="1" id="answer818689271" />
+                      <label for="answer818689271">red</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+                    
+                    <div>
+                      <input type="radio" name="answer" value="2" id="answer818689272" />
+                      <label for="answer818689272">orange</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+                    <div>
+
+                      <input type="radio" name="answer" value="3" id="answer818689273" />
+                      <label for="answer818689273">yellow</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+                    
+                    <div>
+                      <input type="radio" name="answer" value="4" id="answer818689274" />
+                      <label for="answer818689274">green</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="5" id="answer818689275" />
+                      <label for="answer818689275">blue</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="6" id="answer818689276" />
+                      <label for="answer818689276">purple</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="7" id="answer818689277" />
+                      <label for="answer818689277">pink</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="8" id="answer818689278" />
+                      <label for="answer818689278">brown</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="9" id="answer818689279" />
+                      <label for="answer818689279">white</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div>
+                      <input type="radio" name="answer" value="10" id="answer8186892710" />
+                      <label for="answer8186892710">black</label>
+                      <div style="clear: both; height: 2px"></div>
+                    </div>
+
+                    <div style="padding: 3px;">
+                      <input type="submit" value=" vote! " style="margin-right: 5px;"/>
+                      <input type="submit" name="view" value=" results "/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+      </div>
+    </div>
+    <div id="pagedoll"></div>
+    <script src="assets/scripts/pagedoll.js?c=2"></script>
+  </body>
+</html>

@@ -1,0 +1,497 @@
+@font-face {
+    font-family: "Nineteen Ninety Three";
+    src: url("assets/fonts/Nineteen-Ninety-Three.otf");
+}
+
+@counter-style hearts {
+    system: cyclic;
+    symbols: ❤;
+    suffix: "    ";
+}
+
+* {
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    background-image: url("assets/images/site/background-image-pixel-style.png");
+    background-blend-mode: overlay;
+    font-family: "Nineteen Ninety Three", sans-serif;
+    flex-direction: column;
+    margin-top: 0px;
+    row-gap: 20px;
+    cursor: url("assets/images/site/site-cursor.png"), auto;
+}
+
+
+.container {
+    border-width: 7px;
+    border-style: solid;
+    border-image: url("assets/images/site/border.gif") 7 fill round;
+    width: fit-content;
+    
+}
+
+.inner-container {
+    border-width: 2px;
+    border-color: #459c95;
+    border-style: dashed;
+    padding: 20px;
+}
+
+.inner-inner-container {
+    border-image: url("assets/images/site/mint-border.png") 9 fill round;
+    border-width: 9px;
+    border-style: solid;
+    padding: 20px;
+}
+
+h1,h2, h3, p {
+    color: #835252;
+}
+
+.link-button {
+    border: 3px solid #459c95;
+    border-radius: 10px;
+    padding: 10px 30px;
+    background: none;
+    font-family: "Nineteen Ninety Three", sans-serif;
+    text-decoration: none;
+    color: #459c95;
+}
+
+.link-button:hover, .player-container button:hover, .drawbox button:hover, .drawbox input[type="color"]:hover, .poll input[type="submit"]:hover {
+    border-color: #45837e;
+    color: #45837e;
+}
+
+.lace {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    background-image: url("assets/images/site/Lace_Ribbon_Mint.gif");
+    background-repeat: repeat-x;
+    background-size: 300px;
+    height: 100px;
+    filter: drop-shadow(#73b8b2 0px 3px);
+}
+
+.title-container {
+    margin-top: 100px;
+}
+
+ul, ol {
+    color: #459c95;
+}
+
+ul {
+    list-style-type: hearts;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+.row {
+    display: flex;
+    column-gap: 20px;
+    align-items: flex-start;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.spots-bg {
+    background-image: url("assets/images/site/spots-background.png");
+    background-size: contain;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.player-container {
+    background-color: #f2fffe;
+    padding: 10px;
+    border-color: #459c95;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.player-container button {
+    border: 3px solid #459c95;
+    border-radius: 10px;
+    padding-bottom: 3px;
+    background: none;
+    font-family: "Nineteen Ninety Three", sans-serif;
+    text-decoration: none;
+    color: #459c95;
+    font-weight: 900;
+}
+
+.map h2 {
+    color: #459c95;
+    text-align: center;
+} 
+
+.map a {
+    text-decoration: none;
+    justify-content: center;
+}
+
+.map img:hover {
+    width: 100px;
+    
+}
+
+.map img {
+    width: 64px;
+    transition: width 0.5s;
+}
+.map figure {
+    text-align: center;
+}
+
+.map figcaption {
+    position: relative;
+    top: -15px;
+}
+
+.map nav {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.gallery h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #459c95;
+}
+
+a:hover {
+    color: #45837e;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.gallery-grid img {
+    max-width: 250px;
+    
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.link-grid img, .stamps img, .blinkies img {
+    border-radius: 0px;
+}
+
+.blinkies img {
+    width: 150px;
+}
+
+.blinkies, .stamps {
+    width: 100%;
+}
+
+.left {
+    max-width: 200px;
+}
+
+.left > div{
+    width: 100%;
+    max-width: inherit;
+    box-sizing: border-box;
+}
+
+.left, .centre, .right {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.centre {
+    max-width: 50%;
+    min-width: min-content;
+    row-gap: 20px;
+}
+
+.bulletin-board hr {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: #835252;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#pagedoll {
+    position: fixed;
+    bottom: 10px;
+    right: -5px;
+}
+
+#pagedoll img {
+    width: 200px;
+}
+
+.relationships figure {
+    text-align: center;
+    margin: 0;
+}
+
+.relationships figcaption {
+    max-width: 128px;
+    color: #459c95;
+}
+
+#drawboxcanvas {
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #835252;
+    border-radius: 10px;
+}
+
+.drawbox button, .poll input[type="submit"] {
+    background: none;
+    border-style: solid;
+    border-color: #459c95;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Nineteen Ninety Three", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #459c95;
+}
+
+.drawbox input[type="color"] {
+    background: none;
+    border-style: solid;
+    border-color: #459c95;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.drawbox input[type="range"] {
+    accent-color: #459c95;
+}
+
+#gallery > div img {
+    width: 200px;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+.poll {
+    width: max-content;
+    row-gap: 5px;
+}
+
+.poll input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #835252;
+}
+
+.poll label {
+    color: #835252;
+}
+
+.poll input[type="submit"] {
+    background: none;
+}
+
+details[name="commissions-info"] summary::marker, details[name="style"] summary::marker, details[name="adopts-info"] summary::marker, details[name="blog"] summary::marker, details[name="outfits"] summary::marker {
+    content: "";
+}
+
+details[name="commissions-info"] summary, details[name="style"] summary,details[name="adopts-info"] summary {
+    color: #459c95;
+    text-align: center;
+}
+
+details[name="commissions-info"] summary:hover, details[name="style"] summary:hover, details[name="adopts-info"] summary:hover {
+    color: #45837e;
+    cursor: grab;
+}
+
+details[name="commissions-info"] summary img, details[name="adopts-info"] summary img {
+    width: 128px;
+    transition: width 0.5s;
+}
+
+details[name="commissions-info"] summary img:hover, details[name="adopts-info"] summary img:hover {
+    width: 150px;
+    
+}
+
+details[name="blog"] summary, details[name="outfits"] summary {
+    color: #835252;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    cursor: grab;
+}
+
+details[name="outfits"] summary {
+    text-wrap: nowrap;
+}
+
+.designs-grid a {
+    max-width: 250px;;
+}
+
+.designs-grid figure {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title span {
+    display: inline-flex;
+    animation: wave 8.25s linear infinite;
+}
+
+.title span:nth-child(0) {
+    animation-delay: 0s;
+}
+
+.title span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.title span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.title span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.title span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.title span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.title span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.title span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.title span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.title span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.title span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.title span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
+.title span:nth-child(12) {
+    animation-delay: 1.2s;
+}
+
+.title span:nth-child(13) {
+    animation-delay: 1.3s;
+}
+
+.title span:nth-child(14) {
+    animation-delay: 1.4s;
+}
+
+.title span:nth-child(15) {
+    animation-delay: 1.5s;
+}
+
+.title span:nth-child(16) {
+    animation-delay: 1.6s;
+}
+
+.title span:nth-child(17) {
+    animation-delay: 1.7s;
+}
+
+.title span:nth-child(18) {
+    animation-delay: 1.8s;
+}
+
+.title span:nth-child(19) {
+    animation-delay: 1.9s;
+}
+
+.title span:nth-child(20) {
+    animation-delay: 2s;
+}
+
+.title span:nth-child(21) {
+    animation-delay: 2.1s;
+}
+
+.title span:nth-child(22) {
+    animation-delay: 2.2s;
+}
+
+.title span:nth-child(23) {
+    animation-delay: 2.3s;
+}
+
+.title span:nth-child(24) {
+    animation-delay: 2.4s;
+}
+
+.title span:nth-child(25) {
+    animation-delay: 2.5s;
+}
+
+.title span:nth-child(26) {
+    animation-delay: 2.6s;
+}
+
+@keyframes wave {
+    0%, 2%, 100% {
+        transform: translateY(0);
+    }
+    1% {
+        transform: translateY(-10px);
+    }
+}

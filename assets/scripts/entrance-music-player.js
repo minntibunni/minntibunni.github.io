@@ -1,0 +1,97 @@
+/*these assign names to very simple getting functions in order to make the more complex functions easier to type and understand*/
+const nowplaying = document.getElementById("nowplaying");
+const info = document.getElementById("info");
+const trackcurrtime = document.getElementById("current-time");
+const trackduration = document.getElementById("duration");
+const prevtrack = document.getElementById("prev-btn");
+const playpause = document.getElementById("playpause-btn");
+const nexttrack = document.getElementById("next-btn");
+const audio = document.getElementById("mu");
+
+
+/*makes the play pause button function*/
+function playPauseTrack() {
+  if (audio.paused == true) {
+      audio.play();
+    playpause.innerHTML =
+    "| |";
+  } else if (audio.paused == false) {
+    audio.pause();
+    playpause.innerHTML =
+    "▷";
+  }
+}
+
+function nextTrack() {
+  /* Goes back to the first track if the current one is the last in the track list */
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else track_index = 0;
+
+  /*loads and plays the next track*/
+  loadTrack(track_index);
+  audio.play();
+  playpause.innerHTML =
+  "| |";
+}
+
+function prevTrack() {
+  /* Goes back to the first track if the current one is the last in the track list */
+  if (track_index > 0)
+    track_index -= 1;
+  else track_index = track_list.length - 1;
+
+  /*loads and plays the previous track*/
+  loadTrack(track_index);
+  audio.play();
+  playpause.innerHTML =
+  "| |";
+}
+
+/*makes the tracks duration and current time to display in a minutes:seconds format*/
+const calculateTime = (secs) => {
+  const minutes = Math.floor(secs / 60);
+  const seconds = Math.floor(secs % 60);
+  const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  return `${minutes}:${returnedSeconds}`;
+}
+
+/*gets the current time of the audio track and displays it*/
+audio.addEventListener('loadedmetadata', () => {
+  trackcurrtime.innerHTML = calculateTime(audio.currentTime);
+});
+
+audio.addEventListener('timeupdate', () => {
+  trackcurrtime.innerHTML = calculateTime(audio.currentTime);
+});
+
+/*gets the full length of the audio track and displays it*/
+audio.addEventListener('loadedmetadata', () => {
+  trackduration.innerHTML = calculateTime(audio.duration);
+});
+
+/* resets everything to get ready for the next track*/
+function resetValues() {
+  trackcurrtime.innerHTML = "0:00";
+  duration.innerHTML = "0:00";
+}
+
+/* actually loads a new track and displays all its info*/
+function loadTrack(track_index) {
+  resetValues();
+
+  /*loads the track*/
+  audio.src = track_list[track_index].path;
+  audio.load();
+
+  /*gives and diplays the title and artist of the track*/
+  info.innerHTML =
+    "<b>" + track_list[track_index].title + "</b> <br> <small>" + track_list[track_index].artist + "</small>";
+
+  /* moves on to the next track when the current one ends*/
+  
+} 
+
+/*wow beautiful... just like this the whole thing starts*/
+loadTrack(track_index);
+audio.addEventListener("ended", () => nextTrack());
