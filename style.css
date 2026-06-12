@@ -196,7 +196,7 @@ a:hover {
 
 .gallery-grid img {
     max-width: 250px;
-    
+    cursor: pointer;
 }
 
 .link-grid {
@@ -376,6 +376,33 @@ details[name="outfits"] summary {
 h1, h2, h3 {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#image-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.486);
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-overlay img {
+    max-height: 80%;
+    margin: 0;
+}
+
+#image-overlay svg {
+    color: white;
+    width: 5%;
+    max-width: 64px;
+}
+
+#image-overlay svg:hover {
+    cursor: pointer
 }
 
 .title span {

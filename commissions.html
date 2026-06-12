@@ -390,14 +390,18 @@
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/trishna-pixel-ododle.gif"
                         alt="An animated GIF of my tenshi kaiwai themed original character drawn in pixel style. She is pointing her hands towards each other and has an angry expression on her face."
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/natsuki-new-pixel-doodle.gif"
                         alt="An animated GIF of my original character who wears princess-themed lolita clothing drawn in a pixel style. She is holder her hands together"
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/rainbow-pixel-doodle.gif"
                         alt="An animated GIF of my original character who is based off rainbows. She has her hands up and is smiling "
+                        onclick="onImgClick()"
+                        onclick="onImgClick()"
                       >
                     </div>
                     <h3 style="text-align: center">chibi</h3>
@@ -405,14 +409,17 @@
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/berrychibiexamplelq.png"
                         alt="An illustration of my strawberry themed original character drawn in a chibi style. She has her hand up to her face."
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/trishna-chibi-bg-examplelq.png"
                         alt="An illustration of my tenshi kaiwai themed original character drawn in a chibi style. She is sitting in her bedroom at her desk."
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/macne-nana-chibi-sleep.png"
                         alt="An illustration of the Vocaloid character Macne Nana wearing sleepwear. She is holding a pillow and is rubbing her eye."
+                        onclick="onImgClick()"
                       >
                     </div>
 
@@ -421,14 +428,17 @@
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/holding-hands-lq.png"
                         alt="An illustration of two of my original characters. They are holding hands, one of them is pointing to their face and looking at the other character. The other character has their hand on their face and has a flustered expression."
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/somniadtiyslq.png"
                         alt="An illustration of a.rriver's (on discord) character. She is lying on a picnic mat and cuddling her furret-like pet."
+                        onclick="onImgClick()"
                       >
                       <img
                         src="https://file.garden/aH6gV0OEQybcML-a/holding-backpack-ig-lq.png"
                         alt="An illustration of the mayor. She is sitting on her knees and holding her backpack."
+                        onclick="onImgClick()"
                       >
                     </div>
                   </div>
@@ -685,6 +695,38 @@ the commission will usually be finished within a week. there will be no updates 
       }
 
       getPagedoll();
+    </script>
+        <div id="image-overlay">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" onclick="onXClick()"><path d="M25.3332 8.54675L23.4532 6.66675L15.9998 14.1201L8.5465 6.66675L6.6665 8.54675L14.1198 16.0001L6.6665 23.4534L8.5465 25.3334L15.9998 17.8801L23.4532 25.3334L25.3332 23.4534L17.8798 16.0001L25.3332 8.54675Z" fill="currentColor"></path></svg>
+      <img id="big-image">
+    </div>
+    <script>
+      function onImgClick(){
+
+        document.addEventListener('click', function(event) {
+          event = event || window.event;
+          var originalImage = event.target || event.srcElement,
+          text = event.target.textContent || event.target.innerText;   
+        
+          if (originalImage.parentElement.classList.contains("gallery-grid")) {
+            originalImageSrc = originalImage.getAttributeNode("src");
+            originalImageAlt = originalImage.getAttributeNode("alt");
+          
+            bigImage = document.getElementById("big-image");
+            bigImage.setAttributeNode(originalImageSrc.cloneNode(true));
+            bigImage.setAttributeNode(originalImageAlt.cloneNode(true));
+      
+            imageOverlay = document.getElementById("image-overlay");
+            imageOverlay.style.display = "flex";
+          }
+
+        }, false);
+      }
+
+      function onXClick() {
+        imageOverlay = document.getElementById("image-overlay");
+        imageOverlay.style.display = "none";
+      }
     </script>
   </body>
 </html>
