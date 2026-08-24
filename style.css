@@ -47,7 +47,7 @@ body {
     padding: 20px;
 }
 
-h1,h2, h3, p {
+h1,h2, h3, h4, p, #service-details-content-container ul {
     color: #835252;
 }
 
@@ -328,18 +328,18 @@ a:hover {
     background: none;
 }
 
-details[name="commissions-info"] summary::marker, details[name="style"] summary::marker, details[name="adopts-info"] summary::marker, details[name="blog"] summary::marker, details[name="outfits"] summary::marker {
+details[name="commissions-info"] summary::marker, details[name="comm-services"] summary::marker,details[name="style"] summary::marker, details[name="adopts-info"] summary::marker, details[name="blog"] summary::marker, details[name="outfits"] summary::marker {
     content: "";
 }
 
-details[name="commissions-info"] summary, details[name="style"] summary,details[name="adopts-info"] summary {
+details[name="commissions-info"] summary, details[name="comm-services"] summary,details[name="style"] summary,details[name="adopts-info"] summary {
     color: #459c95;
     text-align: center;
 }
 
-details[name="commissions-info"] summary:hover, details[name="style"] summary:hover, details[name="adopts-info"] summary:hover {
+details[name="commissions-info"] summary:hover, details[name="comm-services"] summary:hover, details[name="style"] summary:hover, details[name="adopts-info"] summary:hover {
     color: #45837e;
-    cursor: grab;
+    cursor: pointer;
 }
 
 details[name="commissions-info"] summary img, details[name="adopts-info"] summary img {
@@ -350,6 +350,25 @@ details[name="commissions-info"] summary img, details[name="adopts-info"] summar
 details[name="commissions-info"] summary img:hover, details[name="adopts-info"] summary img:hover {
     width: 150px;
     
+}
+
+#services-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: center;
+}
+
+#services-div figure img {
+    width: 250px;
+}
+
+.comm-example {
+    max-width: 300px;
+}
+
+.arrow:hover {
+    cursor: pointer;
 }
 
 details[name="blog"] summary, details[name="outfits"] summary {

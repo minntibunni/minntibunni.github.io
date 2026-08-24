@@ -123,7 +123,7 @@
             <div class="inner-inner-container">
               <p>
                 welcome to buttercream's bunni bakery! this page has information
-                about my art commissions.
+                about my art commissions. it is also going through some reconstruction!
               </p>
               <br />
               <p>
@@ -139,7 +139,7 @@
               </p>
             </div>
 
-            <div class="inner-inner-container">
+            <div class="inner-inner-container" style="display: none;">
               <div
                 style="
                   display: grid;
@@ -616,6 +616,190 @@ the commission will usually be finished within a week. there will be no updates 
                 );
               </script>
             </div>
+
+            <div class="inner-inner-container">
+              <h3>services</h3>
+                <div id="services-div">
+                  
+                  <details id="illust-details" name="comm-services">
+                    <summary>
+                      <figure>
+                        <img src="assets/images/site/banni.png" alt="An image of a bunny head drawn in a pixel style.">
+                        <figcaption>soft illustration</figcaption>
+                      </figure>
+                    </summary>
+                  </details>
+
+                  <details id="soft-chibi-icon-details" name="comm-services">
+                    <summary>
+                      <figure>
+                        <img src="assets/images/site/banni.png" alt="An image of a bunny head drawn in a pixel style.">
+                        <figcaption>ych soft chibi icon</figcaption>
+                      </figure>
+                    </summary>
+                  </details>
+
+                  <details id="soft-eye-banner-details" name="comm-services">
+                    <summary>
+                      <figure>
+                        <img src="assets/images/site/banni.png" alt="An image of a bunny head drawn in a pixel style.">
+                        <figcaption>ych soft blinking eye banner</figcaption>
+                      </figure>
+                    </summary>
+                  </details>
+
+                  <details id="pixel-icon-details" name="comm-services">
+                    <summary>
+                      <figure>
+                        <img src="https://file.garden/aH6gV0OEQybcML-a/pearlexpressionlessexample.gif" alt="An animated GIF of my pearl themed original character drawn in pixel style. She has a blank-faced expression.">
+                        <figcaption>ych pixel blinking icon</figcaption>
+                      </figure>
+                    </summary>
+                    <div id="pixel-icon-content">
+                      <div style="display:flex; gap: 20px">
+                        <div>
+                          <div style="display: flex; align-items: center;">
+                            <img class="arrow" id="pi-left-arrow" src="assets/images/site/leftarrow.png" onclick="piLeftClick()">
+                            <img
+                              class="comm-example"
+                              id="pice"
+                              src="https://file.garden/aH6gV0OEQybcML-a/yoshikiychpixeliconexample.gif"
+                              alt="An animated GIF of my melon soda themed original character drawn in pixel style. He is blinking and smiling."
+                              onclick="onImgClick()"
+                            >
+                            <img class="arrow" id="pi-right-arrow" src="assets/images/site/rightarrow.png" onclick="piRightClick()">
+                          </div>
+                          <p>click the example to enlarge! click the arrow buttons for more examples</p>
+
+                          <script>
+                            let imgNum = 0;
+                            const examples = [
+                              ["https://file.garden/aH6gV0OEQybcML-a/yoshikiychpixeliconexample.gif",
+                            "An animated GIF of my melon soda themed original character drawn in pixel style. He is blinking and smiling."],
+                              ["https://file.garden/aH6gV0OEQybcML-a/neuveahlletteychpixeliconfreebie.gif",
+                                "An animated GIF of neuveahllette's (on discord) original character. They have a sad expression on their face."
+                              ],
+                              ["https://file.garden/aH6gV0OEQybcML-a/trishnapoutexample.gif",
+                                "An animated GIF of my tenshi kaiwai themed original character drawn in pixel style. She is pouting."
+                              ],
+                              ["https://file.garden/aH6gV0OEQybcML-a/pearlexpressionlessexample.gif",
+                                "An animated GIF of my pearl themed original character drawn in pixel style. She has a blank-faced expression."
+                              ]
+                            ];
+                            let commExample = document.getElementById("pice");
+
+                            function piLeftClick() {
+                              imgNum -= 1;
+                              if (imgNum == -1) {
+                                imgNum = 3;
+                              }
+                              document.getElementById("pice").src = examples[imgNum][0];
+                              document.getElementById("pice").alt = examples[imgNum][1];
+                            }
+
+                            function piRightClick() {
+                              imgNum += 1;
+                              if (imgNum == 4) {
+                                imgNum = 0;
+                              }
+                              document.getElementById("pice").src = examples[imgNum][0];
+                              document.getElementById("pice").alt = examples[imgNum][1];
+
+                            }
+
+                          </script>
+
+                        </div>
+                        <div>
+                          <h4>ych pixel blinking icon</h4>
+                          <br>
+                          <p>a cute, blinking icon of a character of your choice! drawn in a pastel, pixel style!</p>
+                          <br>
+                          <p style="font-weight: bold;">pricing: £8</p>
+                          <br>
+                          <ul>
+                            <li>surprise me style commission</li>
+                            <li>4 expressions to choose from ! happy, sad, pouting and blank-faced!</li>
+                            <li>both animated and non-animated versions included !</li>
+                          </ul>
+                          <br>
+                          <p>character details may be simplified! i also work with a more pastel colour palette, so colours may differ from the references given!</p>
+                          <br>
+                          <p>expect this service to be less clean!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+
+                  <details id="pixel-doodle-details" name="comm-services" style="flex: none;">
+                    <summary>
+                      <figure>
+                        <img src="https://file.garden/aH6gV0OEQybcML-a/meloettanewpixeldoodle.gif" alt="An animated GIF of my music themed original character drawn in pixel style. She is smiling and winking and has her sleeves put together.">
+                        <figcaption>surprise me wiggly pixel doodles</figcaption>
+                      </figure>
+                    </summary>
+                  </details>
+
+                </div>
+            </div>
+
+            <div class="inner-inner-container" id="service-details-content-container" style="display: none;">
+
+            </div>
+            <script>
+                illustDetails = document.getElementById("illust-details");
+                chibiIconDetails = document.getElementById("soft-chibi-icon-details");
+                eyeBannerDetails = document.getElementById("soft-eye-banner-details");
+                pixelIconDetails = document.getElementById("pixel-icon-details");
+                pixelDoodleDetails = document.getElementById("pixel-doodle-details");
+                serviceDetailsContainer = document.getElementById("service-details-content-container");
+
+                function moveContents(initialDetailsContainer, content) {
+                  if (initialDetailsContainer.open) {
+                    serviceDetailsContainer.innerHTML = content.innerHTML;
+                    content.style.display = "none";
+                    serviceDetailsContainer.style.display = "block";
+                  } else {
+                    content.style.display = "block";
+                    if (serviceDetailsContainer.innerHTML === content.innerHTML) {
+                      serviceDetailsContainer.style.display = "none";
+                      serviceDetailsContainer.innerHTML = "";
+                    }
+                  }
+                }
+
+                illustDetails.addEventListener("toggle", (event) =>
+                  moveContents(
+                    illustDetails,
+                    document.getElementById("illust-content")
+                  )
+                );
+                chibiIconDetails.addEventListener("toggle", (event) =>
+                  moveContents(
+                    chibiIconDetails,
+                    document.getElementById("chibi-icon-content")
+                  )
+                );
+                eyeBannerDetails.addEventListener("toggle", (event) =>
+                  moveContents(
+                    eyeBannerDetails,
+                    document.getElementById("eye-banner-content")
+                  )
+                );
+                pixelIconDetails.addEventListener("toggle", (event) =>
+                  moveContents(
+                    pixelIconDetails,
+                    document.getElementById("pixel-icon-content")
+                  )
+                );
+                pixelDoodleDetails.addEventListener("toggle", (event) =>
+                  moveContents(
+                    pixelDoodleDetails,
+                    document.getElementById("pixel-doodle-content")
+                  )
+                );
+            </script>
+
             <div class="inner-inner-container">
               <br />
               <a href="https://forms.gle/FCUaWT87QdsqhW6s5"
@@ -695,7 +879,7 @@ the commission will usually be finished within a week. there will be no updates 
           var originalImage = event.target || event.srcElement,
           text = event.target.textContent || event.target.innerText;   
         
-          if (originalImage.parentElement.classList.contains("gallery-grid")) {
+          if (originalImage.parentElement.classList.contains("gallery-grid") || originalImage.classList.contains("comm-example")) {
             originalImageSrc = originalImage.getAttributeNode("src");
             originalImageAlt = originalImage.getAttributeNode("alt");
           
