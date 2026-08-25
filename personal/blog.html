@@ -47,6 +47,47 @@
         <div class="row inner-container" >
           <div class="column inner-inner-container">
             <h3>blog sections</h3>
+                <details id="25-08-26-details" name="blog">
+                  <summary>25/08/26</summary>
+                  <div id="25-08-26-content">
+                    <h3>25/08/26:</h3>
+                    <p>okay so this might be more of a vent post than a blog post unfortunately
+                      <br>
+                      <br>
+                      but i'm kind of feeling a little down about posting my art on social media and doing comms and stuff like that !!
+                      <br>
+                      <br>
+                      when my art wasn't the best, i used to get a lot of likes on tiktok specifically and it felt really good at the time, but now that my art has improved it seems like the algorithm has changed, and so my art receives less and less likes
+                      <br>
+                      <br>
+                      my content also didn't really change much, i was doing basically the same things i was doing before but with my newer art ! however it wouldn't get as many likes, therefore i quit so many times thinking that it was useless to try again
+                      <br>
+                      <br>
+                      but i decided to try again anyway, even if i get a small amount of likes now, maybe later things will improve? but recently i uploaded a few videos and they got restricted by tiktok for reasons i don't really understand .-.
+                      <br>
+                      <br>
+                      and i was really excited to share one artwork because i thought it looked really cute !! so i'm pretty sad about it all since it means my account is basically dead and all my hard work is gone
+                      <br>
+                      <br>
+                      and my other socials aren't doing too well either, tiktok really was the one doing the best even if it wasn't much
+                      <br>
+                      <br>
+                      so i'm not sure what to do now, i really want to promote my comms and get verified on vgen, even though i met all the requirements and worked so hard receiving not much money from my comms, it feels like my effort didn't matter in the end since they didn't want to verify me
+                      <br>
+                      <br>
+                      i'll try promoting more on discord servers and toyhouse, maybe that will get me somewhere? wish me luck (＞n＜)
+                      <br>
+                      <br>
+                      on a happier note... happy late 1 year anniversary to mintbunnies neighbourhood !! making a functional website that other people can see has been a dream of mine since i was 8 and is the reason why i even started coding in the first place !! 
+                      <br>
+                      <br>
+                      reading all the sweet guestbook messages and looking at the (appropriate ・-・;) art on the drawbox makes me feel all fuzzy and warm inside !! thank you to everyone who left something sweet there !!
+                      <br>
+                      <br>
+                      hopefully i can make the neighbourhood a more lively place within the next year as well !! bye !!
+                    </p>
+                  </div>
+                </details>
                 <details id="01-09-25-details" name="blog">
                   <summary>01/09/25</summary>
                   <div id="01-09-25-content">
@@ -89,10 +130,17 @@
             <div id="details-content-container" class="inner-inner-container" style="display: none;">
           </div>
           <script>
-            blog2 = document.getElementById("01-09-25-details")
+            blog3 = document.getElementById("25-08-26-details");
+            blog2 = document.getElementById("01-09-25-details");
             blog1 = document.getElementById("26-08-25-details");
             detailsContainer = document.getElementById("details-content-container");
-
+            
+            blog3.addEventListener("toggle", (event) =>
+              moveContents(
+                blog3,
+                document.getElementById("25-08-26-content")
+              )
+            ); 
             blog2.addEventListener("toggle", (event) =>
               moveContents(
                 blog2,

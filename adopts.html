@@ -50,18 +50,29 @@
           <div class="column inner-container">
             <div class="inner-inner-container">
               <p>
-                welcome to chocola's cosy cocoa shop! this page has information
-                about <span style="text-decoration-line: line-through">people she has kidnapped</span> my adopts!
+                welcome to chocola's cosy cocoa shop! this page shows <span style="text-decoration-line: line-through">people she has kidnapped</span> my adopts! the reference sheets link to their toyhouse pages !
               </p>
               <br>
               <p>i'm also selling them through my <a href="https://vgen.co/minntibunni/shop">vgen!</a></p>
+              <br>
+              <details style="color: #835252">
+                <summary>
+                  contact me here if you would like to buy an adopt!
+                </summary>
+                <br />
+                <p>
+                  discord: minntibunni
+                  <br />
+                  email: minntibunni@gmail.com
+                </p>
+              </details>
             </div>
 
             <div class="inner-inner-container">
               <div
                 style="
                   display: grid;
-                  grid-template-columns: auto auto auto;
+                  grid-template-columns: auto auto;
                   gap: 20px;
                 "
               >
@@ -147,38 +158,6 @@
                   </div>
                 </details>
 
-                <details id="privacy-policy-details" name="adopts-info">
-                  <summary>
-                    <figure>
-                      <img src="assets/images/site/privacy-policy.png" alt="An image of a receipt drawn in pixel style."/>
-                      <figcaption>privacy policy</figcaption>
-                    </figure>
-                  </summary>
-                  <div id="privacy-policy-content">
-                    <h2>privacy policy</h2>
-                    <p>
-                      ("i" and "me" refers to the artist, minntibunni, who has created the adopts. "you" refers
-                      to the buyer)
-                    </p>
-                    <br />
-                    <p>
-                      when you buy an adopt, i will be able to see payment
-                      details through stripe if you use a credit/debit card such
-                      as the last 4 digits of the card number (not the full
-                      number as that is hidden from me), expiry date and your
-                      post code (not the full address as only the post code can
-                      be entered in the payment form). this is so that i get
-                      paid for the adopt. payment details are stored in my
-                      stripe account which is protected through two factor
-                      authentication.
-                    </p>
-                    <br />
-                    <a href="https://stripe.com/gb/privacy"
-                      >here's stripe's privacy policy which shows what data they
-                      collect.</a
-                    >
-                  </div>
-                </details>
               </div>
 
               <div
@@ -189,9 +168,6 @@
               <script>
                 designsDetails = document.getElementById("designs-details");
                 tosDetails = document.getElementById("tos-details");
-                privacyPolicyDetails = document.getElementById(
-                  "privacy-policy-details"
-                );
                 detailsContainer = document.getElementById(
                   "details-content-container"
                 );
@@ -220,26 +196,10 @@
                     document.getElementById("tos-content")
                   )
                 );
-                privacyPolicyDetails.addEventListener("toggle", (event) =>
-                  moveContents(
-                    privacyPolicyDetails,
-                    document.getElementById("privacy-policy-content")
-                  )
-                );
               </script>
             </div>
             <div class="inner-inner-container">
-              <details style="color: #835252">
-                <summary>
-                  contact me here if you would like to buy an adopt!
-                </summary>
-                <br />
-                <p>
-                  discord: minntibunni
-                  <br />
-                  email: minntibunni@gmail.com
-                </p>
-              </details>
+              <a href="adoptsprivacypolicy.html">link to privacy policy</a>
             </div>
           </div>
         </div>

@@ -204,11 +204,14 @@ a:hover {
     grid-template-columns: auto auto auto auto auto auto;
 }
 
-.link-grid img, .stamps img, .blinkies img {
+.stamps img, .blinkies img {
     border-radius: 0px;
     filter: opacity(0.5) grayscale(100%) drop-shadow(1px 0px 0px rgb(155, 255, 213)) brightness(1.06) saturate(1.3);
 }
 
+.link-grid img {
+    border-radius: 0px;
+}
 .blinkies img {
     width: 150px;
 }
@@ -367,8 +370,13 @@ details[name="commissions-info"] summary img:hover, details[name="adopts-info"] 
     max-width: 300px;
 }
 
-.arrow:hover {
+.arrow:hover, .lservice:hover {
     cursor: pointer;
+}
+
+.lservice {
+    color: #459c95;
+    text-align: center;
 }
 
 details[name="blog"] summary, details[name="outfits"] summary {
