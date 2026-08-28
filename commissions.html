@@ -1045,13 +1045,16 @@
                               ],
                               ["https://file.garden/aH6gV0OEQybcML-a/hopenewestpixeldoodle.gif",
                                 "An animated GIF of my original character drawn in a pixel art style. She is smiling and pointing with her hand."
+                              ],
+                              ["https://file.garden/aH6gV0OEQybcML-a/sleepypixeldoodle.gif",
+                                "An animated GIF of the mayor in her sleepwear. She is rubbing her eyes."
                               ]
                             ];
 
                             function pdLeftClick() {
                               pdi -= 1;
                               if (pdi == -1) {
-                                pdi = 2;
+                                pdi = 3;
                               }
                               document.getElementsByClassName("pdce")[1].src = pdExamples[pdi][0];
                               document.getElementsByClassName("pdce")[1].alt = pdExamples[pdi][1];
@@ -1059,7 +1062,7 @@
 
                             function pdRightClick() {
                               pdi += 1;
-                              if (pdi == 3) {
+                              if (pdi == 4) {
                                 pdi = 0;
                               }
                               document.getElementsByClassName("pdce")[1].src = pdExamples[pdi][0];
