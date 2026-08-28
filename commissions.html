@@ -175,14 +175,14 @@
                       <div style="display:flex; gap: 20px">
                         <div>
                           <div style="display: flex; align-items: center;">
-                            <img class="arrow" src="assets/images/site/leftarrow.png" alt="An arrow facing left." onclick="pdLeftClick()">
+                            <img class="arrow" src="assets/images/site/leftarrow.png" alt="An arrow facing left." onclick="iLeftClick()">
                             <img
                               class="comm-example ice"
                               src="assets/images/site/banni.png"
                               alt="An image of a bunny head drawn in a pixel style."
                               onclick="onImgClick()"
                             >
-                            <img class="arrow" src="assets/images/site/rightarrow.png" alt="An arrow facing right." onclick="pdRightClick()">
+                            <img class="arrow" src="assets/images/site/rightarrow.png" alt="An arrow facing right." onclick="iRightClick()">
                           </div>
                           <p>click the example to enlarge! click the arrow buttons for more examples</p>
                           <div style="display: grid; grid-template-columns: auto auto;">
@@ -204,7 +204,7 @@
                           <script>
                             let ii = 0;
                             const iExamples = [
-                              ["assets/images/site",
+                              ["assets/images/site/banni.png",
                             "An image of a bunny head drawn in a pixel style."]
                             ];
 
@@ -385,19 +385,404 @@
                   <details id="soft-chibi-icon-details" name="comm-services">
                     <summary>
                       <figure>
-                        <img src="assets/images/site/banni.png" alt="An image of a bunny head drawn in a pixel style.">
+                        <img src="https://file.garden/aH6gV0OEQybcML-a/chibiiconbasetestwatermarked.gif" alt="An animated icon illustration of the mayor in chibi form. They are blinking.">
                         <figcaption>ych soft chibi icon</figcaption>
                       </figure>
                     </summary>
+                    <div id="chibi-icon-content">
+                      <div style="display:flex; gap: 20px">
+                        <div>
+                          <div style="display: flex; align-items: center;">
+                            <img class="arrow" src="assets/images/site/leftarrow.png" alt="An arrow facing left." onclick="ciLeftClick()">
+                            <img
+                              class="comm-example cice"
+                              src="https://file.garden/aH6gV0OEQybcML-a/chibiiconbasetestwatermarked.gif"
+                              alt="An animated icon illustration of the mayor in chibi form. They are blinking."
+                              onclick="onImgClick()"
+                            >
+                            <img class="arrow" src="assets/images/site/rightarrow.png" alt="An arrow facing right." onclick="ciRightClick()">
+                          </div>
+                          <p>click the example to enlarge! click the arrow buttons for more examples</p>
+                          <div style="display: grid; grid-template-columns: auto auto;">
+
+                            <figure class="lservice">
+                              <img src="assets/images/site/tos.png" alt="An image of a notepad and pencil drawn in pixel style." onclick="ciTOS()">
+                              <figcaption onclick="ciTOS()">terms of service</figcaption>
+                            </figure>
+                            <figure class="lservice">
+                              <img src="assets/images/site/dos-donts.png" alt="An image of a board showing the bakery's menu drawn in pixel style." onclick="ciDD()">
+                              <figcaption onclick="ciDD()">do's and don'ts</figcaption>
+                            </figure>
+                          </div>
+                          <br>
+                          <div class="ci-inner-service-details-container">
+
+                          </div>
+
+                          <script>
+                            let cii = 0;
+                            const ciExamples = [
+                              ["https://file.garden/aH6gV0OEQybcML-a/chibiiconbasetestwatermarked.gif",
+                            "An animated icon illustration of the mayor in chibi form. They are blinking."]
+                            ];
+
+                            function ciLeftClick() {
+                              cii -= 1;
+                              if (cii == -1) {
+                                cii = 0;
+                              }
+                              document.getElementsByClassName("cice")[1].src = ciExamples[cii][0];
+                              document.getElementsByClassName("cice")[1].alt = ciExamples[cii][1];
+                            }
+
+                            function ciRightClick() {
+                              cii += 1;
+                              if (cii == 1) {
+                                cii = 0;
+                              }
+                              document.getElementsByClassName("cice")[1].src = ciExamples[cii][0];
+                              document.getElementsByClassName("cice")[1].alt = ciExamples[cii][1];
+
+                            }
+
+                          </script>
+                          <script>
+                            const ciTOSContent=`<h4>terms of service</h4>
+                                <br>
+                                <p>
+                                  ("i" and "me" refers to the artist, minntibunni, who is
+                                  providing the commission service. "you" refers to the
+                                  commissioner paying for the service)
+                                </p>
+                                <br>
+                                <p>
+                                  by commissioning me, you have automatically accepted my
+                                  terms of service.
+                                  <br />
+                                  <br />
+                                  i will not start the commission unless i have been paid
+                                  the 100% upfront.
+                                  <br />
+                                  <br />
+                                  if the upfront payment hasn't been made within a week of
+                                  me sending the invoice/payment link and accepting the commission then
+                                  i will assume that you no longer want the commission and
+                                  will cancel it.
+                                  <br />
+                                  <br />
+                                  i only allow minor revisions after the art has been sent. (e.g. a missing accessory or wrong colour has been used)
+                                  <br />
+                                  <br />
+                                  i'm allowed to decline a commission for whatever reason.
+                                  <br /><br />
+                                  you cannot ask for refunds or holds.
+                                  <br /><br />
+                                  there will be no updates on what stage the art is at as it is a surprise-me.
+                                  <br /><br />
+                                  commissioners who issue chargebacks will get
+                                  blacklisted.
+                                  <br /><br />
+                                  i own all rights to the art and i'm allowed to post the
+                                  finished piece onto social media.
+                                  <br /><br />
+                                  you are allowed to post the finished commission on
+                                  social media but you must credit me.
+                                  <br /><br />
+                                  you are not allowed to remove the watermark or claim the piece as your own.
+                                  <br /><br />
+                                  you can not use the art piece for monetised content unless you have paid the monetised content fee.
+                                  <br><br>
+                                  you can not use the art piece for commercial content unless you have paid the commercial content fee.
+                                  <br /><br />
+                                  my art is not allowed to be used for NFTs or AI
+                                  training.
+                                  <br /><br />
+                                  rude and disrespectful commissioners will get
+                                  blacklisted.
+                                </p>`;
+                            const ciDosDontsContent=`<h4>dos and don'ts</h4>
+                                <br>
+                                <p>dos:</p>
+                                <br>
+                                <ul style="color: rgb(131, 82, 82)">
+                                  <li>ocs</li>
+                                  <li>real people</li>
+                                  <li>fanart</li>
+                                  <li>males</li>
+                                  <li>chubbier/plus-size characters</li>
+                                  <li>furries (only anthro and flat faced)</li>
+                                  <li>kemonomimi</li>
+                                  <li>characters with animal ears and/or tails</li>
+                                </ul>
+                                <br/>
+                                <p>don'ts:</p>
+                                <br>
+                                <ul style="color: rgb(131, 82, 82)">
+                                  <li>masculine characters</li>
+                                  <li>more than 1 character in one artwork</li>
+                                  <li>any gore</li>
+                                  <li>suggestive art and nsfw</li>
+                                  <li>muscular characters</li>
+                                  <li>elderly characters</li>
+                                  <li>complex/detailed backgrounds</li>
+                                </ul>
+                                <br>
+                                <p>
+                                  (if you're unsure about whether i can draw your character
+                                  then you can contact me and ask!)
+                                </p>`
+                            
+                            let ciTOSClick = 0
+                            let ciDDClick = 0
+
+                            function ciTOS() {
+                              ciDDClick = 0
+                              ciTOSClick += 1
+                              if (ciTOSClick % 2 != 0) {
+                                document.getElementsByClassName("ci-inner-service-details-container")[1].innerHTML = ciTOSContent;
+                              } else {
+                                document.getElementsByClassName("ci-inner-service-details-container")[1].innerHTML = "";
+                              }
+                            }
+                            
+                            function ciDD() {
+                              ciTOSClick = 0
+                              ciDDClick += 1
+                              if (ciDDClick % 2 != 0) {
+                                document.getElementsByClassName("ci-inner-service-details-container")[1].innerHTML = ciDosDontsContent;
+                              } else {
+                                document.getElementsByClassName("ci-inner-service-details-container")[1].innerHTML = "";
+                              }
+                            }
+                          </script>
+                        </div>  
+                        <div>
+                          <h4>ych soft chibi icon</h4>
+                          <br>
+                          <p>a cute, chibi blinking icon of a character of your choice! drawn in a soft, sketchy style!</p>
+                          <br>
+                          <p style="font-weight: bold;">pricing:
+                            <br>
+                            <br>
+                            base price: £8
+                            <br>
+                            use in monetised content fee: +150%
+                            <br>
+                            use in commercial content fee: +200%
+                          </p>
+                          <br>
+                          <ul>
+                            <li>a surprise me style commission</li>
+                            <li>both animated and non-animated versions included !</li>
+                          </ul>
+                          <br>
+                          <p>character details may be simplified! i also work with a more pastel colour palette, so colours may differ from the references given!</p>
+                        </div>
+                      </div>
                   </details>
 
-                  <details id="soft-eye-banner-details" name="comm-services">
+                  <details id="soft-eye-banner-details" name="comm-services" style="align-self: self-end;">
                     <summary>
                       <figure>
-                        <img src="assets/images/site/banni.png" alt="An image of a bunny head drawn in a pixel style.">
+                        <img src="https://file.garden/aH6gV0OEQybcML-a/ycheyesmeloetta.gif" alt="An animated illustration featuring a close-up of my music-themed original character's eyes blinking.">
                         <figcaption>ych soft blinking eye banner</figcaption>
                       </figure>
                     </summary>
+                    <div id="eye-banner-content">
+                      <div style="display:flex; gap: 20px">
+                        <div>
+                          <div style="display: flex; align-items: center;">
+                            <img class="arrow" src="assets/images/site/leftarrow.png" alt="An arrow facing left." onclick="ebLeftClick()">
+                            <img
+                              class="comm-example ebce"
+                              src="https://file.garden/aH6gV0OEQybcML-a/ycheyesmeloetta.gif"
+                              alt="An animated illustration featuring a close-up of my music-themed original character's eyes blinking."
+                              onclick="onImgClick()"
+                            >
+                            <img class="arrow" src="assets/images/site/rightarrow.png" alt="An arrow facing right." onclick="ebRightClick()">
+                          </div>
+                          <p>click the example to enlarge! click the arrow buttons for more examples</p>
+                          <div style="display: grid; grid-template-columns: auto auto;">
+
+                            <figure class="lservice">
+                              <img src="assets/images/site/tos.png" alt="An image of a notepad and pencil drawn in pixel style." onclick="ebTOS()">
+                              <figcaption onclick="ebTOS()">terms of service</figcaption>
+                            </figure>
+                            <figure class="lservice">
+                              <img src="assets/images/site/dos-donts.png" alt="An image of a board showing the bakery's menu drawn in pixel style." onclick="ebDD()">
+                              <figcaption onclick="ebDD()">do's and don'ts</figcaption>
+                            </figure>
+                          </div>
+                          <br>
+                          <div class="eb-inner-service-details-container">
+
+                          </div>
+
+                          <script>
+                            let ebi = 0;
+                            const ebExamples = [
+                              ["https://file.garden/aH6gV0OEQybcML-a/ycheyesmeloetta.gif",
+                            "An animated illustration featuring a close-up of my music-themed original character's eyes blinking."],
+                              ["https://file.garden/aH6gV0OEQybcML-a/newycheyesbasetestwatermarked.gif",
+                                "An animated illustration featuring a close-up of the mayor's eyes blinking."
+                              ]
+                            ];
+
+                            function ebLeftClick() {
+                              ebi -= 1;
+                              if (ebi == -1) {
+                                ebi = 1;
+                              }
+                              document.getElementsByClassName("ebce")[1].src = ebExamples[ebi][0];
+                              document.getElementsByClassName("ebce")[1].alt = ebExamples[ebi][1];
+                            }
+
+                            function ebRightClick() {
+                              ebi += 1;
+                              if (ebi == 2) {
+                                ebi = 0;
+                              }
+                              document.getElementsByClassName("ebce")[1].src = ebExamples[ebi][0];
+                              document.getElementsByClassName("ebce")[1].alt = ebExamples[ebi][1];
+
+                            }
+
+                          </script>
+                          <script>
+                            const ebTOSContent=`<h4>terms of service</h4>
+                                <br>
+                                <p>
+                                  ("i" and "me" refers to the artist, minntibunni, who is
+                                  providing the commission service. "you" refers to the
+                                  commissioner paying for the service)
+                                </p>
+                                <br>
+                                <p>
+                                  by commissioning me, you have automatically accepted my
+                                  terms of service.
+                                  <br />
+                                  <br />
+                                  i will not start the commission unless i have been paid
+                                  the 100% upfront.
+                                  <br />
+                                  <br />
+                                  if the upfront payment hasn't been made within a week of
+                                  me sending the invoice/payment link and accepting the commission then
+                                  i will assume that you no longer want the commission and
+                                  will cancel it.
+                                  <br />
+                                  <br />
+                                  i only allow minor revisions after the art has been sent. (e.g. a missing accessory or wrong colour has been used)
+                                  <br />
+                                  <br />
+                                  i'm allowed to decline a commission for whatever reason.
+                                  <br /><br />
+                                  there will be no updates on what stage the art is at as it is a surprise-me.
+                                  <br /><br />
+                                  you cannot ask for refunds or holds.
+                                  <br /><br />
+                                  commissioners who issue chargebacks will get
+                                  blacklisted.
+                                  <br /><br />
+                                  i own all rights to the art and i'm allowed to post the
+                                  finished piece onto social media.
+                                  <br /><br />
+                                  you are allowed to post the finished commission on
+                                  social media but you must credit me.
+                                  <br /><br />
+                                  you are not allowed to remove the watermark or claim the piece as your own.
+                                  <br /><br />
+                                  you can not use the art piece for monetised content unless you have paid the monetised content fee.
+                                  <br><br>
+                                  you can not use the art piece for commercial content unless you have paid the commercial content fee.
+                                  <br /><br />
+                                  my art is not allowed to be used for NFTs or AI
+                                  training.
+                                  <br /><br />
+                                  rude and disrespectful commissioners will get
+                                  blacklisted.
+                                </p>`;
+                            const ebDosDontsContent=`<h4>dos and don'ts</h4>
+                                <br>
+                                <p>dos:</p>
+                                <br>
+                                <ul style="color: rgb(131, 82, 82)">
+                                  <li>ocs</li>
+                                  <li>real people</li>
+                                  <li>fanart</li>
+                                  <li>males</li>
+                                  <li>chubbier/plus-size characters</li>
+                                  <li>furries (only anthro and flat faced)</li>
+                                  <li>kemonomimi</li>
+                                  <li>characters with animal ears and/or tails</li>
+                                </ul>
+                                <br/>
+                                <p>don'ts:</p>
+                                <br>
+                                <ul style="color: rgb(131, 82, 82)">
+                                  <li>masculine characters</li>
+                                  <li>more than 1 character in one artwork</li>
+                                  <li>any gore</li>
+                                  <li>suggestive art and nsfw</li>
+                                  <li>muscular characters</li>
+                                  <li>elderly characters</li>
+                                  <li>complex/detailed backgrounds</li>
+                                </ul>
+                                <br>
+                                <p>
+                                  (if you're unsure about whether i can draw your character
+                                  then you can contact me and ask!)
+                                </p>`
+                            
+                            let ebTOSClick = 0
+                            let ebDDClick = 0
+
+                            function ebTOS() {
+                              ebDDClick = 0
+                              ebTOSClick += 1
+                              if (ebTOSClick % 2 != 0) {
+                                document.getElementsByClassName("eb-inner-service-details-container")[1].innerHTML = ebTOSContent;
+                              } else {
+                                document.getElementsByClassName("eb-inner-service-details-container")[1].innerHTML = "";
+                              }
+                            }
+                            
+                            function ebDD() {
+                              ebTOSClick = 0
+                              ebDDClick += 1
+                              if (ebDDClick % 2 != 0) {
+                                document.getElementsByClassName("eb-inner-service-details-container")[1].innerHTML = ebDosDontsContent;
+                              } else {
+                                document.getElementsByClassName("eb-inner-service-details-container")[1].innerHTML = "";
+                              }
+                            }
+                          </script>
+
+                        </div>
+                        <div>
+                          <h4>ych soft blinking eye banner</h4>
+                          <br>
+                          <p>a cute, blinking eye banner of a character of your choice! drawn in a soft, sketchy style!</p>
+                          <br>
+                          <p style="font-weight: bold;">pricing:
+                            <br>
+                            <br>
+                            base price: £5
+                            <br>
+                            use in monetised content fee: +150%
+                            <br>
+                            use in commercial content fee: +200%
+                          </p>
+                          <br>
+                          <ul>
+                            <li>a surprise me style commission</li>
+                            <li>both animated and non-animated versions included !</li>
+                          </ul>
+                          <br>
+                          <p>character details may be simplified! i also work with a more pastel colour palette, so colours may differ from the references given!</p>
+                        </div>
+                      </div>
+                    </div>
                   </details>
 
                   <details id="pixel-icon-details" name="comm-services">
@@ -657,13 +1042,16 @@
                             "An animated GIF of my melon soda themed original character drawn in a pixel style. He is waving his hand and is smiling."],
                               ["https://file.garden/aH6gV0OEQybcML-a/meloettanewpixeldoodle.gif",
                                 "An animated GIF of my music themed original character drawn in pixel style. She is smiling and winking and has her sleeves put together."
+                              ],
+                              ["https://file.garden/aH6gV0OEQybcML-a/hopenewestpixeldoodle.gif",
+                                "An animated GIF of my original character drawn in a pixel art style. She is smiling and pointing with her hand."
                               ]
                             ];
 
                             function pdLeftClick() {
                               pdi -= 1;
                               if (pdi == -1) {
-                                pdi = 1;
+                                pdi = 2;
                               }
                               document.getElementsByClassName("pdce")[1].src = pdExamples[pdi][0];
                               document.getElementsByClassName("pdce")[1].alt = pdExamples[pdi][1];
@@ -671,7 +1059,7 @@
 
                             function pdRightClick() {
                               pdi += 1;
-                              if (pdi == 2) {
+                              if (pdi == 3) {
                                 pdi = 0;
                               }
                               document.getElementsByClassName("pdce")[1].src = pdExamples[pdi][0];
